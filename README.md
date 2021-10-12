@@ -28,7 +28,6 @@ python preprocess_VCTK.py --datadir VCTKDir --outputdir OutputDir [--make_test_s
 ```
 python train_TTS.py --precision 16 \
                     --datadir FeatureDir \
-                    --raw_datadir LJSpeechDir \
                     --vocoder_ckpt_path WaveGlowCKPT_PATH \
                     --sampledir SampleDir \
                     --batch_size 128 \
@@ -48,7 +47,6 @@ python train_TTS.py --precision 16 \
 ```
 python train_TTS.py --precision 16 \
                     --datadir FeatureDir \
-                    --raw_datadir VCTKDir \
                     --vocoder_ckpt_path WaveGlowCKPT_PATH \
                     --sampledir SampleDir \
                     --batch_size 64 \
