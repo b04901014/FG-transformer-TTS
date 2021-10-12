@@ -10,7 +10,7 @@ git submodule update --init --recursive
 Get the waveglow vocoder checkpoint from [here](https://drive.google.com/open?id=1rpK8CzAAirq9sWZhe9nlfvxMF1dRgFbF) (This is from the [NVIDIA official WaveGlow repo](https://github.com/NVIDIA/waveglow)).
 
 ## Setup environment
-TODO
+See `docker/Dockerfile` for the packages need to be installed.
 
 ## Dataset preprocessing
 ### [LJSpeech](https://keithito.com/LJ-Speech-Dataset/)
