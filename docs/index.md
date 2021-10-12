@@ -7,4 +7,6 @@
 
 ### LJ Speech samples (single speaker)
 
- - Reference style <audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>
+|Style reference speech|Generated Speech|Text|
+|----------------------|----------------|----|
+|<audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>|GGGGGGGGGGGGGGGGGGGGGGGG|
