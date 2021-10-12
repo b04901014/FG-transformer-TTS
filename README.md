@@ -7,13 +7,13 @@ Submitted to ICASSP 2022.
 ```
 git submodule update --init --recursive
 ```
-Get the waveglow vocoder checkpoint from [here](https://drive.google.com/open?id=1rpK8CzAAirq9sWZhe9nlfvxMF1dRgFbF).
+Get the waveglow vocoder checkpoint from [here](https://drive.google.com/open?id=1rpK8CzAAirq9sWZhe9nlfvxMF1dRgFbF) (This is from the [NVIDIA official WaveGlow repo](https://github.com/NVIDIA/waveglow)).
 
 ## Setup environment
 TODO
 
 ## Dataset preprocessing
-### [LJSpeech](https://keithito.com/LJ-Speech-Dataset/):
+### [LJSpeech](https://keithito.com/LJ-Speech-Dataset/)
 ```
 python preprocess_LJSpeech.py --datadir LJSpeechDir --outputdir OutputDir
 ```
