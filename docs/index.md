@@ -9,4 +9,10 @@
 
 |Style reference speech|Generated Speech|Text|
 |----------------------|----------------|----|
-|<audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/1.txt" style="width:100%; height:100%; margin: 0 auto;">|
+|<audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/1_syn.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/1.txt" width="300" height="80">|
+|<audio src="samples/LJSpeech/2_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/2_syn.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/2.txt" width="300" height="80">|
+|<audio src="samples/LJSpeech/3_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/3_syn.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/3.txt" width="300" height="80">|
+|<audio src="samples/LJSpeech/4_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/4_syn.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/4.txt" width="300" height="80">|
+|<audio src="samples/LJSpeech/5_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/5_syn.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/5.txt" width="300" height="80">|
+|<audio src="samples/LJSpeech/6_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/6_syn.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/6.txt" width="300" height="80">|
+|<audio src="samples/LJSpeech/7_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/7_syn.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/7.txt" width="300" height="80">|
