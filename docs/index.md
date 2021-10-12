@@ -9,4 +9,4 @@
 
 |Style reference speech|Generated Speech|Text|
 |----------------------|----------------|----|
-|<audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/1.txt">|
+|<audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>|<audio src="samples/LJSpeech/1_ref.wav" type="audio/wav"  controls preload></audio>|<embed src="samples/LJSpeech/1.txt" style="width:100%; height:100%; margin: 0 auto;">|
