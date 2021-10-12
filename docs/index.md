@@ -7,4 +7,4 @@
 
 ### LJ Speech samples (single speaker)
 
- - [Reference style](/samples/LJSpeech/1_ref.wav)
+ - Reference style <audio src="samples/LJSpeech/1_ref.wav"></audio>
