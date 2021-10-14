@@ -1,5 +1,5 @@
 # LST-TTS
-Official implementation for the paper [Fine-grained style control in transformer-based text-to-speech synthesis](...).
+Official implementation for the paper [Fine-grained style control in transformer-based text-to-speech synthesis](http://arxiv.org/abs/2110.06306).
 Submitted to ICASSP 2022.
 **Audio samples/demo for our system can be accessed [here](https://b04901014.github.io/FG-transformer-TTS/)**
 
