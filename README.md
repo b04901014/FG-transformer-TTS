@@ -20,7 +20,10 @@ python preprocess_LJSpeech.py --datadir LJSpeechDir --outputdir OutputDir
 ### [VCTK](https://datashare.ed.ac.uk/handle/10283/3443)
 Get the leading and trailing scilence marks from [this repo](https://github.com/nii-yamagishilab/vctk-silence-labels), and put `vctk-silences.0.92.txt` in your VCTK dataset directory.
 ```
-python preprocess_VCTK.py --datadir VCTKDir --outputdir OutputDir [--make_test_set]
+python preprocess_VCTK.py --datadir VCTKDir --outputdir Output_Train_Dir
+```
+```
+python preprocess_VCTK.py --datadir VCTKDir --outputdir Output_Test_Dir --make_test_set
 ```
  - `--make_test_set`: specify this flag to process the speakers in the test set, otherwise only process training speakers.
 ## Training
