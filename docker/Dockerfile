@@ -10,5 +10,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends git \
     libsndfile1
 RUN /opt/conda/bin/pip install pytorch-lightning==1.4.7 transformers==4.10.2 soundfile matplotlib
 RUN /opt/conda/bin/pip install librosa
+RUN /opt/conda/bin/pip install g2p_en tqdm
 
 WORKDIR /workspace/project
