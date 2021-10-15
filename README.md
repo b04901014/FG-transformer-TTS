@@ -74,3 +74,7 @@ python synthesis.py --etts_checkpoint VCTK_Model_CKPT \
                     --vocoder_ckpt_path WaveGlowCKPT_PATH
 ```
 
+### Pretrained checkpoints
+We provide pretrained checkpoints on LJ Speech and VCTK. The model is a little large since it contains all the training and optimizer states.
+ - [LJ Speech](https://cmu.box.com/s/wjwx9vwnhe76hetxawjf6d2r7as3yvxa)
+ - [VCTK](https://cmu.box.com/s/bu7fo2mk709sl064718o2jk3nsvbo3ix)
