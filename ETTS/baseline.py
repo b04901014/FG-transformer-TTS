@@ -18,12 +18,10 @@ class ETTSTransformer_baseline(nn.Module):
         self.text_embedding = nn.Embedding(len(symbols.keys()), text_embed_dim, padding_idx=symbols['<pad>'])
         self.global_style_embedding = nn.Embedding(ngst, d_model)
         self.encoder = TransformerEncoder(
-            TransformerEncoderLayer(d_model, nheads, hidden_size),
-            nlayers
+            [TransformerEncoderLayer(d_model, nheads, hidden_size) for i in range(nlayers)]
         )
         self.decoder = TransformerDecoderGuided(
-            TransformerDecoderLayer(d_model, nheads, hidden_size),
-            nlayers
+            [TransformerDecoderLayer(d_model, nheads, hidden_size) for i in range(nlayers)]
         )
         self.emotion_global_prenet = EmotionPrenet(emo_embed_dim, hidden_size=d_model, dropout=0.1)
         self.emotion_global_attn = nn.MultiheadAttention(d_model, num_heads=4, batch_first=True)

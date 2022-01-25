@@ -211,15 +211,15 @@ class TransformerDecoderLayer(nn.Module):
         return tgt, attn, self_attn
 
 class TransformerDecoderGuided(nn.Module):
-    def __init__(self, decoder_layer, num_layers,
+    def __init__(self, decoder_layers,
                  guided_sigma=0.7, guided_layers=None,
                  norm=None):
         super().__init__()
-        self.layers = nn.ModuleList([copy.deepcopy(decoder_layer) for i in range(num_layers)])
-        self.num_layers = num_layers
+        self.layers = nn.ModuleList(decoder_layers)
+        self.num_layers = len(decoder_layers)
         self.norm = norm
         self.guided_sigma = guided_sigma
-        self.guided_layers = guided_layers if guided_layers is not None else num_layers
+        self.guided_layers = guided_layers if guided_layers is not None else self.num_layers
 
     def forward(self, tgt, text, tgt_mask=None,
                 memory_mask=None, tgt_key_padding_mask=None,
@@ -331,15 +331,15 @@ class TransformerEncoderLayer(nn.Module):
         return src, attn
 
 class TransformerEncoder(nn.Module):
-    def __init__(self, encoder_layer, num_layers,
+    def __init__(self, encoder_layers,
                  guided_sigma=0.3, guided_layers=None,
                  norm=None):
         super(TransformerEncoder, self).__init__()
-        self.layers = nn.ModuleList([copy.deepcopy(encoder_layer) for i in range(num_layers)])
-        self.num_layers = num_layers
+        self.layers = nn.ModuleList(encoder_layers)
+        self.num_layers = len(encoder_layers)
         self.norm = norm
         self.guided_sigma = guided_sigma
-        self.guided_layers = guided_layers if guided_layers is not None else num_layers
+        self.guided_layers = guided_layers if guided_layers is not None else self.num_layers
 
     def forward(self, src, mask=None, src_key_padding_mask=None):
         output = src
@@ -405,15 +405,15 @@ class PairedTransformerEncoderLayer(nn.Module):
         return src, attn, attn_emo
 
 class PairedTransformerEncoder(nn.Module):
-    def __init__(self, encoder_layer, num_layers,
+    def __init__(self, encoder_layers,
                  guided_sigma=0.3, guided_layers=None,
                  norm=None):
         super(PairedTransformerEncoder, self).__init__()
-        self.layers = nn.ModuleList([copy.deepcopy(encoder_layer) for i in range(num_layers)])
-        self.num_layers = num_layers
+        self.layers = nn.ModuleList(encoder_layers)
+        self.num_layers = len(self.layers)
         self.norm = norm
         self.guided_sigma = guided_sigma
-        self.guided_layers = guided_layers if guided_layers is not None else num_layers
+        self.guided_layers = guided_layers if guided_layers is not None else self.num_layers
 
     def forward(self, src, global_emotion, local_emotion,
                 mask=None, src_key_padding_mask=None, emotion_key_padding_mask=None):

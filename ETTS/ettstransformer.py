@@ -19,12 +19,10 @@ class ETTSTransformer(nn.Module):
         self.global_style_embedding = nn.Embedding(ngst, d_model)
         self.local_style_embedding = nn.Embedding(nlst, d_model)
         self.encoder = PairedTransformerEncoder(
-            PairedTransformerEncoderLayer(d_model, nheads, hidden_size),
-            nlayers
+            [PairedTransformerEncoderLayer(d_model, nheads, hidden_size) for i in range(nlayers)]
         )
         self.decoder = TransformerDecoderGuided(
-            TransformerDecoderLayer(d_model, nheads, hidden_size),
-            nlayers
+            [TransformerDecoderLayer(d_model, nheads, hidden_size) for i in range(nlayers)]
         )
         self.emotion_global_prenet = EmotionPrenet(emo_embed_dim, hidden_size=d_model, dropout=0.1)
         self.emotion_local_prenet = nn.LSTM(emo_embed_dim, d_model, 1, batch_first=True)
