@@ -128,7 +128,8 @@ class ETTSTransformer(nn.Module):
                 mels_pos = self.pos_mel(self.decoder_prenet(mels[:, 1:], dropout=0.2)).transpose(0, 1)
                 mels_pos = emotion_global.expand(mels_pos.size(0), -1, -1) + mels_pos
                 mels_pos = torch.cat([start_token, mels_pos], 0)
-            output, _, attns, _ = self.decoder(mels_pos, src)#, memory_mask=attn_mask)
+            tgt_mask = self.tgt_mask[: mels_pos.size(0), : mels_pos.size(0)]
+            output, _, attns, _ = self.decoder(mels_pos, src, tgt_mask=tgt_mask)#, memory_mask=attn_mask)
             gate_logit = self.stop_pred(output[-1]).item()
             output = output[-1] #B=1, C
             mel_out = self.mel_linear(output)
