@@ -3,6 +3,8 @@ Official implementation for the paper [Fine-grained style control in transformer
 Submitted to ICASSP 2022.
 **Audio samples/demo for our system can be accessed [here](https://b04901014.github.io/FG-transformer-TTS/)**
 
+ - Mar. 5 2022: Fixed a inference bug of not passing the causal mask, quality of samples should be slightly better. (I have not update the demos with this.)
+
 ## Setting up submodules
 ```
 git submodule update --init --recursive
